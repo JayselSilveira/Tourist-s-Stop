@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+    font-weight: 300;
+}
+
+section {
+    padding: 5.5%;
+    box-sizing: border-box;
+}
+
+.title-text {
+    font-size: 2.5rem;
+    color: #fabe28;
+    font-weight: 600;
+    position: relative;
+    padding-left: 10px;
+}
+
+/*.btn {
+    font-size: 1.5rem;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+}*/
+
+.title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item .content {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10px;
+  }
+  
+.item .content .card {
+    position: relative;
+    max-width: 700px;
+    /*height: 570px;*/
+    height: 100%;
+    width: 100%;
+    margin-left: 300px;
+    border: 15px solid #000;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+}
+  
+.item .content .card .imgBx {
+    position: relative;
+    height: 330px;
+    width: 100%;
+}
+  
+.item .content .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+  
+.item .content .card .text h3 {
+    font-weight: 500;
+    color: #000;
+}
+
+.white {
+    color: #fff !important;
+}

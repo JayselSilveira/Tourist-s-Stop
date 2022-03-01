@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+    font-weight: 300;
+}
+
+section {
+    padding: 3.5%;
+    box-sizing: border-box;
+}
+
+.title-text {
+    font-size: 2.5rem;
+    color: #fabe28;
+    font-weight: 600;
+    position: relative;
+    padding-left: 10px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.item .card {
+    position: relative;
+    max-width: 800px;
+    margin-left: 450px;
+    height: 625px;
+    width: 500px;
+    border: 10px solid #fabe28;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+    background-color: #000;
+}
+
+.white {
+    color: #fff !important;
+}
+
+#rating{
+    width:400px;
+}
+
+.result-container{
+    width: 230px; height: 50px;
+    background-color: #ccc;
+    vertical-align:middle;
+    display:inline-block;
+    position: relative;
+    top: -4px;
+}
+
+.rate-stars{
+    width: 230px; height: 50px;
+    background: url(./Images/rate.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+.rate-bg{
+    height: 50px;
+    background-color: #ffbe10;
+    position: absolute;
+}
+
+/* Display rate count */    
+.reviewCount, .reviewScore {
+    font-size: 20px; 
+    color: #fabe28; 
+    background-color: #000;
+}
+
+.reviewScore {
+    font-weight: 600;
+}
+/* Display rate count Ends*/  
+
+#sub1, #sub2{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000;
+    background: #fabe28;
+    display: inline-block;
+    padding: 5px 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    text-decoration: none;
+}
+
+#sub1:hover, #sub2:hover {
+    letter-spacing: 6px;
+}
