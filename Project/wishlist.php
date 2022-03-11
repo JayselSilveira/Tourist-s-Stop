@@ -15,6 +15,20 @@
 
   $sql = "SELECT * FROM wishlist;";
   $result = $con->query($sql);
+  
+  $temp = $_GET['id'];
+
+  if(isset($_POST['delete'])){
+    $sql2 = "DELETE FROM rating WHERE post_id = '$temp';";  
+    $sql3 = "DELETE FROM review WHERE post_id = '$temp';";
+    $sql1 = "DELETE FROM posts WHERE post_id = '$temp';";
+    if(($con->query($sql2) == true) && ($con->query($sql3) == true) && ($con->query($sql1) == true)) {
+      header("location: food.php");
+    } else {
+      echo "ERROR: $sql1 <br> $con->error";
+    }
+    echo 'alert("Successfully deleted!")'; 
+  }
 
   // Close the database connection
   $con->close();
@@ -91,7 +105,7 @@
             <td style="border:3px solid #fabe28; text-align:center; font-size:20px;"><?php echo $rows1['description'];?></td>
             <td style="border:3px solid #fabe28; text-align:center; font-size:20px;">
             
-            <form action="record.php?id=<?php echo $rows1['post_id']?>" method="post"><a href="record.php?id=<?php echo $rows['post_id']?>"><input type="submit" value="View Record" name="review" class="btn" id="<?php echo $rows['post_id'];?>" style="background-color:#f77c1e; font-weight:500; font-size: 1.2rem; 
+            <form action="wishlistRecord.php?id=<?php echo $rows1['post_id']?>" method="post"><a href="wishlistRecord.php?id=<?php echo $rows['post_id']?>"><input type="submit" value="View Record" name="review" class="btn" id="<?php echo $rows['post_id'];?>" style="background-color:#f77c1e; font-weight:500; font-size: 1.2rem; 
             color: #fff; display: inline-block; padding: 2px 18px; margin-top: 10px; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; width: 190px;"></a></form>
 
             <form action="review.php?id=<?php echo $rows1['post_id']?>" method="post"><a href="review.php?id=<?php echo $rows['post_id']?>"><input type="submit" value="Review" name="review" class="btn" id="<?php echo $rows['post_id'];?>" style="background-color:#1a8f3d; font-weight:500; font-size: 1.2rem; 
